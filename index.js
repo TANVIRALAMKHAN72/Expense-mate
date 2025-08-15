@@ -20,11 +20,11 @@ let expensesCollection;
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
     const db = client.db("Money_Mate");
     expensesCollection = db.collection("expenses");
     
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
     app.listen(port, () => {
